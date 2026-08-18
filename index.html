@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohit Computer | Jarhagaon</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#222;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#071a3d,#123d78);
+  color:white;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#ffd43b;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+.hero{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(135deg,#0b1f44,#1769aa);
+  color:white;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero h1 span{
+  color:#ffd43b;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 24px;
+  margin:6px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.whatsapp{
+  background:#25d366;
+  color:white;
+}
+
+.call{
+  background:#ffd43b;
+  color:#111;
+}
+
+.maps{
+  background:white;
+  color:#123d78;
+}
+
+section{
+  padding:65px 8%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.title h2{
+  font-size:32px;
+  color:#123d78;
+}
+
+.title p{
+  color:#666;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  color:#123d78;
+  margin-bottom:8px;
+}
+
+.about{
+  background:white;
+  text-align:center;
+}
+
+.contact{
+  background:#0b1f44;
+  color:white;
+  text-align:center;
+}
+
+.contact h2{
+  color:#ffd43b;
+}
+
+.contact p{
+  margin:10px 0;
+}
+
+footer{
+  background:#06142d;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+@media(max-width:700px){
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav a{
+    margin:0 6px;
+    font-size:14px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Rohit <span>Computer</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Rohit <span>Computer</span></h1>
+
+    <p>
+      Jarhagaon का भरोसेमंद CSC एवं Online Service Centre
+    </p>
+
+    <p>
+      तेज़ • आसान • भरोसेमंद सेवा
+    </p>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/917869419478"
+       target="_blank">
+       💬 WhatsApp करें
+    </a>
+
+    <a class="btn call"
+       href="tel:7869419478">
+       📞 Call करें
+    </a>
+
+    <a class="btn maps"
+       href="https://maps.app.goo.gl/238FXFLhTPMA97nj7?g_st=ac"
+       target="_blank">
+       📍 Location
+    </a>
+  </div>
+</section>
+
+<section id="services">
+
+  <div class="title">
+    <h2>हमारी सेवाएँ</h2>
+    <p>आपकी जरूरत के अनुसार विभिन्न Online एवं CSC Services</p>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <div class="icon">📄</div>
+      <h3>जाति प्रमाण पत्र</h3>
+      <p>जाति प्रमाण पत्र के लिए ऑनलाइन आवेदन सहायता।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h3>निवास प्रमाण पत्र</h3>
+      <p>निवास प्रमाण पत्र हेतु ऑनलाइन आवेदन।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>आय प्रमाण पत्र</h3>
+      <p>आय प्रमाण पत्र के लिए ऑनलाइन सेवा।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Scholarship</h3>
+      <p>छात्रवृत्ति एवं शिक्षा संबंधी ऑनलाइन फॉर्म।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>Online Form</h3>
+      <p>सरकारी एवं निजी ऑनलाइन फॉर्म भरने की सुविधा।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🪪</div>
+      <h3>PAN Card</h3>
+      <p>PAN Card से संबंधित ऑनलाइन सेवाएँ।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🖨️</div>
+      <h3>Print & Scan</h3>
+      <p>Print, Scan, Photocopy एवं Document Services।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📸</div>
+      <h3>Photo & Document</h3>
+      <p>Photo, Document एवं अन्य डिजिटल सेवाएँ।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>CSC Services</h3>
+      <p>विभिन्न CSC एवं Digital Services की सुविधा।</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>Other Online Services</h3>
+      <p>अन्य ऑनलाइन सेवाओं के लिए संपर्क करें।</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+
+  <div class="title">
+    <h2>हमारे बारे में</h2>
+  </div>
+
+  <p>
+    <strong>Rohit Computer, Jarhagaon</strong>
+    आपके लिए विभिन्न CSC, Online Form, Document,
+    Print एवं Digital Services उपलब्ध कराने का प्रयास करता है।
+  </p>
+
+  <br>
+
+  <p>
+    हमारा उद्देश्य है कि आपको ऑनलाइन सेवाएँ
+    आसान और सुविधाजनक तरीके से उपलब्ध हों।
+  </p>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="title">
+    <h2>संपर्क करें</h2>
+  </div>
+
+  <p>📍 Near Rahan River, Main Road, Jarhagaon</p>
+
+  <p>📞 7869419478</p>
+
+  <p>💬 WhatsApp पर संपर्क करें</p>
+
+  <br>
+
+  <a class="btn whatsapp"
+     href="https://wa.me/917869419478"
+     target="_blank">
+     WhatsApp
+  </a>
+
+  <a class="btn call"
+     href="tel:7869419478">
+     Call Now
+  </a>
+
+  <a class="btn maps"
+     href="https://maps.app.goo.gl/238FXFLhTPMA97nj7?g_st=ac"
+     target="_blank">
+     Google Maps
+  </a>
+
+</section>
+
+<footer>
+
+  <p>© 2026 Rohit Computer, Jarhagaon</p>
+  <p>All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
