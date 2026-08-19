@@ -58,12 +58,34 @@ header{
     align-items:center;
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
 .logo img{
-    height:70px;
-    width:70px;
+    height:58px;
+    width:58px;
     display:block;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:8px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:white;
+    font-size:22px;
+}
+
+.logo-text small{
+    color:#b9d9ff;
+    font-size:11px;
+    margin-top:3px;
 }
 
 nav a{
@@ -348,6 +370,10 @@ footer strong{
 
 <div class="logo">
     <img src="logo.jpg" alt="Rohit Computer Jarhagaon Logo">
+    <div class="logo-text">
+        <strong>Rohit Computer</strong>
+        <small>Jarhagaon • Digital Service Centre</small>
+    </div>
 </div>
 
 <nav>
