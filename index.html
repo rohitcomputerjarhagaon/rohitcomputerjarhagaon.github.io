@@ -61,31 +61,37 @@ header{
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:14px;
+    min-width:0;
 }
 
 .logo img{
-    height:58px;
-    width:58px;
+    height:65px;
+    width:65px;
     display:block;
-    object-fit:cover;
-    border-radius:8px;
+    object-fit:contain;
+    border-radius:10px;
 }
 
 .logo-text{
     display:flex;
     flex-direction:column;
+    min-width:0;
 }
 
 .logo-text strong{
     color:white;
-    font-size:24px;
+    font-size:29px;
+    font-weight:800;
+    white-space:nowrap;
+    letter-spacing:.2px;
 }
 
 .logo-text small{
     color:#b9d9ff;
-    font-size:11px;
-    margin-top:3px;
+    font-size:12px;
+    margin-top:4px;
+    white-space:nowrap;
 }
 
 nav a{
@@ -335,17 +341,20 @@ footer strong{
 }
 
 .logo-text strong{
-    font-size:18px;
+    font-size:20px;
+    white-space:nowrap;
 }
 
 .logo-text small{
     font-size:9px;
+    white-space:nowrap;
 }
 
-    header{
-        flex-direction:column;
-        gap:12px;
-    }
+   header{
+    flex-direction:row;
+    gap:10px;
+    padding:10px 4%;
+}
 
     nav a{
         margin:0 6px;
@@ -383,8 +392,8 @@ footer strong{
 <div class="logo">
     <img src="logo.jpg" alt="Rohit Computer Jarhagaon Logo">
     <div class="logo-text">
-        <strong>Rohit Computer</strong>
-        <small>Jarhagaon • Digital Service Centre</small>
+        <strong>Rohit Computer Jarhagaon</strong>
+     <small>Digital Service Centre • CSC & Online Services</small>
     </div>
 </div>
 
