@@ -1158,7 +1158,307 @@ footer{
 footer strong{
     color:#ffd43b;
 }
+/* =========================================
+   LATEST ONLINE FORMS - PREMIUM
+========================================= */
 
+.latest-forms{
+    background:
+    linear-gradient(135deg,#f5f8ff,#ffffff);
+}
+
+.forms-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(290px,1fr));
+
+    gap:25px;
+}
+
+
+/* FORM CARD */
+
+.latest-form-card{
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #e1e9f5;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+}
+
+.latest-form-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.15);
+}
+
+
+/* TOP */
+
+.form-top{
+    padding:22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071c45,
+        #124e9b
+    );
+
+    color:white;
+}
+
+
+/* OFFICIAL ICON */
+
+.form-logo{
+    width:68px;
+    height:68px;
+
+    flex-shrink:0;
+
+    border-radius:15px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    box-shadow:
+    0 6px 18px rgba(0,0,0,.22);
+}
+
+
+/* FORM TITLE */
+
+.form-title h3{
+    font-size:20px;
+
+    margin-bottom:5px;
+
+    color:#fff;
+}
+
+.form-title span{
+    font-size:12px;
+
+    color:#cfe3ff;
+}
+
+
+/* BODY */
+
+.form-body{
+    padding:22px;
+}
+
+.form-body > p{
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+}
+
+
+/* DOCUMENTS */
+
+.documents-title{
+    color:#123d78;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.documents{
+    list-style:none;
+
+    margin-bottom:20px;
+}
+
+.documents li{
+    position:relative;
+
+    padding:7px 0 7px 24px;
+
+    color:#555;
+
+    font-size:13px;
+
+    border-bottom:
+    1px dashed #e2e7ef;
+}
+
+.documents li:last-child{
+    border-bottom:none;
+}
+
+.documents li::before{
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:6px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#e9f8ef;
+
+    color:#168442;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    font-weight:bold;
+}
+
+
+/* BUTTONS */
+
+.form-buttons{
+    display:flex;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+}
+
+.form-btn{
+    flex:1;
+
+    min-width:120px;
+
+    padding:11px 13px;
+
+    border-radius:9px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.form-btn:hover{
+    transform:translateY(-2px);
+}
+
+.apply-btn{
+    background:#123d78;
+
+    color:white;
+}
+
+.official-btn{
+    background:#eef4ff;
+
+    color:#123d78;
+
+    border:1px solid #d4e1f5;
+}
+
+.whatsapp-btn{
+    background:#25d366;
+
+    color:white;
+}
+
+
+/* IMPORTANT NOTE */
+
+.form-note{
+    max-width:1000px;
+
+    margin:28px auto 0;
+
+    padding:15px 18px;
+
+    background:#fff8df;
+
+    border-left:4px solid #f4b400;
+
+    border-radius:8px;
+
+    color:#665200;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .forms-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-top{
+        padding:18px;
+    }
+
+    .form-logo{
+        width:58px;
+        height:58px;
+        font-size:29px;
+    }
+
+    .form-title h3{
+        font-size:18px;
+    }
+
+}
 
 /* =========================================
    TABLET / MOBILE
@@ -1818,11 +2118,10 @@ footer strong{
 
 
 <!-- ========================================
-     ONLINE FORMS
+     LATEST ONLINE FORMS
 ======================================== -->
 
-<section class="forms" id="forms">
-
+<section class="latest-forms" id="forms">
 
     <div class="section-title">
 
@@ -1831,7 +2130,7 @@ footer strong{
         </h2>
 
         <p>
-            नए Online Forms और आवेदन की जानकारी के लिए संपर्क करें
+            आवश्यक दस्तावेज देखें और Official Portal से आवेदन करें
         </p>
 
     </div>
@@ -1840,70 +2139,511 @@ footer strong{
     <div class="forms-grid">
 
 
-        <div class="form-card">
+       <!-- ==================================
+     NSDL PAN CARD
+================================== -->
+
+<div class="latest-form-card">
+
+    <div class="form-top">
+
+        <div class="form-logo">
+            🪪
+        </div>
+
+        <div class="form-title">
 
             <h3>
-                🎓 Scholarship Forms
+                NSDL PAN Card
             </h3>
 
-            <p>
-                छात्रवृत्ति एवं शिक्षा से जुड़े ऑनलाइन आवेदन की सहायता।
-            </p>
-
-            <span class="form-badge">
-                Online Form
+            <span>
+                NSDL e-Gov • PAN Services
             </span>
 
         </div>
 
+    </div>
 
-        <div class="form-card">
 
-            <h3>
-                📝 Government Forms
-            </h3>
+    <div class="form-body">
 
-            <p>
-                विभिन्न सरकारी भर्ती एवं ऑनलाइन आवेदन फॉर्म भरने की सुविधा।
-            </p>
+        <p>
+            नया PAN Card, PAN Correction और PAN Reprint
+            से संबंधित ऑनलाइन सेवा।
+        </p>
 
-            <span class="form-badge">
-                Application Help
-            </span>
+
+        <div class="documents-title">
+            📁 आवश्यक दस्तावेज
+        </div>
+
+
+        <ul class="documents">
+
+            <li>
+                Aadhaar Card
+            </li>
+
+            <li>
+                पहचान प्रमाण (POI)
+            </li>
+
+            <li>
+                पता प्रमाण (POA)
+            </li>
+
+            <li>
+                जन्मतिथि प्रमाण (DOB Proof)
+            </li>
+
+            <li>
+                Mobile Number
+            </li>
+
+            <li>
+                Passport Size Photo — आवश्यकता अनुसार
+            </li>
+
+        </ul>
+
+
+        <div class="form-buttons">
+
+            <a
+                class="form-btn official-btn"
+                href="https://www.protean-tinpan.com/"
+                target="_blank"
+                rel="noopener"
+            >
+                🔗 NSDL Official
+            </a>
+
+
+            <a
+                class="form-btn apply-btn"
+                href="https://www.protean-tinpan.com/services/pan/"
+                target="_blank"
+                rel="noopener"
+            >
+                Apply PAN
+            </a>
+
+
+            <a
+                class="form-btn whatsapp-btn"
+                href="https://wa.me/917869419478?text=NSDL%20PAN%20Card%20ke%20liye%20apply%20karna%20hai."
+                target="_blank"
+                rel="noopener"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+       <!-- ========================================
+     SCHOLARSHIP FORMS
+======================================== -->
+
+<section class="latest-forms" id="scholarship">
+
+    <div class="section-title">
+
+        <h2>
+            🎓 Latest Scholarship Forms
+        </h2>
+
+        <p>
+            Scholarship की जानकारी • Required Documents • Official Link • Apply
+        </p>
+
+    </div>
+
+
+    <div class="forms-grid">
+
+
+        <!-- ==================================
+             1. CG POST MATRIC SCHOLARSHIP
+        ================================== -->
+
+        <div class="latest-form-card">
+
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🎓
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        CG Post Matric Scholarship
+                    </h3>
+
+                    <span>
+                        छत्तीसगढ़ शासन • Scholarship Portal
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    छत्तीसगढ़ के पात्र विद्यार्थियों के लिए
+                    Post Matric Scholarship के Online आवेदन
+                    एवं Renewal की सुविधा।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card
+                    </li>
+
+                    <li>
+                        Caste Certificate
+                    </li>
+
+                    <li>
+                        Income Certificate
+                    </li>
+
+                    <li>
+                        Residence / Domicile Certificate
+                    </li>
+
+                    <li>
+                        Previous Class Marksheet
+                    </li>
+
+                    <li>
+                        Current College Admission / Bonafide Certificate
+                    </li>
+
+                    <li>
+                        Bank Passbook
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Passport Size Photograph
+                    </li>
+
+                    <li>
+                        College / Course Details
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn official-btn"
+                        href="https://schoolscholarship.cg.nic.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 Official Link
+                    </a>
+
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://schoolscholarship.cg.nic.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Apply Now
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=CG%20Post%20Matric%20Scholarship%20form%20bharwana%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="form-card">
 
-            <h3>
-                🪪 PAN Card
-            </h3>
+        <!-- ==================================
+             2. NSP SCHOLARSHIP
+        ================================== -->
 
-            <p>
-                PAN Card आवेदन एवं संबंधित ऑनलाइन सेवाओं में सहायता।
-            </p>
+        <div class="latest-form-card">
 
-            <span class="form-badge">
-                Digital Service
-            </span>
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🇮🇳
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        NSP Scholarship
+                    </h3>
+
+                    <span>
+                        National Scholarship Portal
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    National Scholarship Portal (NSP) पर
+                    विभिन्न Central Government Scholarship
+                    Schemes के लिए Online आवेदन।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card / Aadhaar related details
+                    </li>
+
+                    <li>
+                        OTR ID & Password
+                    </li>
+
+                    <li>
+                        Previous Class Marksheet
+                    </li>
+
+                    <li>
+                        Current Admission / Bonafide Certificate
+                    </li>
+
+                    <li>
+                        Institute / College Details
+                    </li>
+
+                    <li>
+                        Bank Account Details
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Passport Size Photograph
+                    </li>
+
+                    <li>
+                        Caste Certificate — यदि scheme में लागू हो
+                    </li>
+
+                    <li>
+                        Income Certificate — यदि scheme में लागू हो
+                    </li>
+
+                    <li>
+                        Disability Certificate — यदि लागू हो
+                    </li>
+
+                    <li>
+                        अन्य Scheme-specific Documents
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn official-btn"
+                        href="https://scholarships.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 Official Link
+                    </a>
+
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://scholarships.gov.in/Students"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Apply Now
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=NSP%20Scholarship%20form%20bharwana%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="form-card">
 
-            <h3>
-                📄 Certificates
-            </h3>
+        <!-- ==================================
+             3. AZIM PREMJI SCHOLARSHIP
+        ================================== -->
 
-            <p>
-                जाति, निवास और आय प्रमाण पत्र के ऑनलाइन आवेदन में सहायता।
-            </p>
+        <div class="latest-form-card">
 
-            <span class="form-badge">
-                Certificate Service
-            </span>
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🎓
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        Azim Premji Scholarship
+                    </h3>
+
+                    <span>
+                        Azim Premji Foundation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    Azim Premji Scholarship के eligible
+                    girl students के लिए Online Scholarship Application।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Passport Size Photograph
+                    </li>
+
+                    <li>
+                        Aadhaar Card
+                    </li>
+
+                    <li>
+                        Bank Account Details
+                    </li>
+
+                    <li>
+                        Class 10 Marksheet
+                    </li>
+
+                    <li>
+                        Class 12 Marksheet
+                    </li>
+
+                    <li>
+                        College Admission Proof
+                    </li>
+
+                    <li>
+                        College / University Details
+                    </li>
+
+                    <li>
+                        Course / Degree Details
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        अन्य मांगे गए Documents
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn official-btn"
+                        href="https://azimpremjifoundation.org/what-we-do/education/azim-premji-scholarship/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 Official Link
+                    </a>
+
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://azimpremjifoundation.org/what-we-do/education/azim-premji-scholarship/applications/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Apply Now
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=Azim%20Premji%20Scholarship%20ke%20liye%20apply%20karna%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -1911,12 +2651,444 @@ footer strong{
     </div>
 
 
-    <p class="forms-note">
+    <!-- ==================================
+         SCHOLARSHIP NOTE
+    ================================== -->
 
-        ⚠️ किसी भी फॉर्म की अंतिम तिथि बदल सकती है।
-        वर्तमान जानकारी के लिए Rohit Computer, Jarhagaon से संपर्क करें।
+    <div class="form-note">
 
-    </p>
+        ⚠️ <strong>महत्वपूर्ण:</strong>
+        सभी Scholarship में Eligibility और Required Documents
+        अलग-अलग हो सकते हैं। आवेदन करने से पहले संबंधित
+        Official Portal पर वर्तमान नियम और अंतिम तिथि जरूर देखें।
+
+        <br><br>
+
+        📌 <strong>Rohit Computer Jarhagaon</strong> पर
+        Scholarship Form भरने, Documents Upload करने और
+        Online Application में सहायता उपलब्ध है।
+
+    </div>
+
+
+</section>
+
+
+        <!-- ==================================
+             DRIVING LICENCE
+        ================================== -->
+
+        <div class="latest-form-card">
+
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🚘
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        Driving Licence
+                    </h3>
+
+                    <span>
+                        Parivahan • Sarathi
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    Learner Licence, Driving Licence एवं DL related
+                    online services।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card / Valid ID
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Address Proof
+                    </li>
+
+                    <li>
+                        Date of Birth Proof
+                    </li>
+
+                    <li>
+                        Passport Size Photo — आवश्यकता अनुसार
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn official-btn"
+                        href="https://parivahan.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 Official Site
+                    </a>
+
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://sarathi.parivahan.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Apply Now
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=Driving%20Licence%20ke%20liye%20online%20apply%20karna%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             GOVERNMENT FORMS
+        ================================== -->
+
+        <div class="latest-form-card">
+
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🏛️
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        Government Forms
+                    </h3>
+
+                    <span>
+                        सरकारी Online Applications
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    विभिन्न सरकारी योजनाओं, आवेदन एवं Online Forms
+                    भरने की सुविधा।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Passport Size Photo
+                    </li>
+
+                    <li>
+                        Educational Documents
+                    </li>
+
+                    <li>
+                        Bank Account Details
+                    </li>
+
+                    <li>
+                        संबंधित Form के अनुसार अन्य Documents
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn official-btn"
+                        href="https://www.india.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 India.gov.in
+                    </a>
+
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://www.india.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Forms देखें
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=Government%20online%20form%20bharwana%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             CASTE / RESIDENCE / INCOME
+        ================================== -->
+
+        <div class="latest-form-card">
+
+            <div class="form-top">
+
+                <div class="form-logo">
+                    📄
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        Certificate Services
+                    </h3>
+
+                    <span>
+                        जाति • निवास • आय
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    जाति, निवास एवं आय प्रमाण पत्र के Online आवेदन
+                    में सहायता।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Address Related Document
+                    </li>
+
+                    <li>
+                        Income Related Document — आवश्यकता अनुसार
+                    </li>
+
+                    <li>
+                        Caste Related Document — आवश्यकता अनुसार
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="https://edistrict.cgstate.gov.in/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🔗 Apply / Portal
+                    </a>
+
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=Jati%20Nivas%20Aay%20certificate%20ke%20liye%20apply%20karna%20hai."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             OTHER ONLINE FORM
+        ================================== -->
+
+        <div class="latest-form-card">
+
+            <div class="form-top">
+
+                <div class="form-logo">
+                    🌐
+                </div>
+
+                <div class="form-title">
+
+                    <h3>
+                        Other Online Forms
+                    </h3>
+
+                    <span>
+                        अन्य Online Services
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-body">
+
+                <p>
+                    भर्ती, admission, registration और अन्य online
+                    applications के लिए संपर्क करें।
+                </p>
+
+
+                <div class="documents-title">
+                    📁 सामान्यतः आवश्यक दस्तावेज
+                </div>
+
+
+                <ul class="documents">
+
+                    <li>
+                        Aadhaar Card
+                    </li>
+
+                    <li>
+                        Mobile Number
+                    </li>
+
+                    <li>
+                        Passport Size Photo
+                    </li>
+
+                    <li>
+                        Signature
+                    </li>
+
+                    <li>
+                        Educational Documents
+                    </li>
+
+                    <li>
+                        Form के अनुसार अन्य Documents
+                    </li>
+
+                </ul>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        class="form-btn whatsapp-btn"
+                        href="https://wa.me/917869419478?text=Mujhe%20online%20form%20ke%20baare%20me%20jaankari%20chahiye."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        💬 जानकारी लें
+                    </a>
+
+                    <a
+                        class="form-btn apply-btn"
+                        href="#contact"
+                    >
+                        📞 Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="form-note">
+
+        ⚠️ <strong>महत्वपूर्ण:</strong>
+        Required Documents form/service के अनुसार अलग हो सकते हैं।
+        आवेदन करने से पहले संबंधित Official Portal की current requirements
+        जरूर check करें। Rohit Computer पर document preparation और
+        online application में सहायता उपलब्ध है।
+
+    </div>
+
 
 </section>
 
