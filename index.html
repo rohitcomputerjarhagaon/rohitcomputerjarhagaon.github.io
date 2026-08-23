@@ -140,6 +140,7 @@ border:1px solid #d9e5f6;box-shadow:0 6px 16px rgba(18,61,120,.08)
 .service-card:nth-child(10) .service-icon{background:linear-gradient(145deg,#f0f3f8,#46576d);color:#fff}
 .service-card:nth-child(11) .service-icon{background:linear-gradient(145deg,#fff0f5,#d83c76);color:#fff}
 .service-card:nth-child(12) .service-icon{background:linear-gradient(145deg,#e9fbff,#087e9c);color:#fff}
+.service-card:nth-child(13) .service-icon{background:linear-gradient(145deg,#fff0e0,#d83b32);color:#fff}
 
 .form-logo{
     position:relative;
@@ -254,6 +255,13 @@ section{padding:55px 5%}.section-title h2{font-size:29px}
 nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
 .service-card{padding:21px}.gallery-card img{height:230px}
 }
+
+/* VOTER SERVICE */
+.voter-icon i{font-size:29px}
+@media(max-width:1000px){
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+}
+
 </style>
 </head>
 
@@ -388,6 +396,13 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
             <h3>CSC Digital Services</h3>
             <p>CSC एवं अन्य Digital Online Services।</p>
             <a href="#" class="view-details" onclick="openService('csc');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon voter-icon"><i class="fa-solid fa-person-booth"></i></div>
+            <h3>Voter Service</h3>
+            <p>मतदाता पंजीयन, सुधार, पता परिवर्तन एवं Voter ID संबंधित Online सेवाएँ।</p>
+            <a href="#" class="view-details" onclick="openService('voter');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -525,6 +540,30 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
                     <a class="form-btn official-btn" href="https://parivahan.gov.in/" target="_blank">Official Site</a>
                     <a class="form-btn apply-btn" href="https://sarathi.parivahan.gov.in/" target="_blank">Apply Now</a>
                     <a class="form-btn whatsapp-btn" href="https://wa.me/917869419478?text=Driving%20Licence%20ke%20liye%20online%20apply%20karna%20hai." target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="latest-form-card">
+            <div class="form-top">
+                <div class="form-logo"><i class="fa-solid fa-person-booth"></i></div>
+                <div class="form-title"><h3>Voter Service</h3><span>Election Commission • Voter Services</span></div>
+            </div>
+            <div class="form-body">
+                <p>नया Voter Registration, नाम/पता सुधार एवं Voter ID संबंधित Online सेवाओं में सहायता।</p>
+                <div class="documents-title">आवश्यक दस्तावेज</div>
+                <ul class="documents">
+                    <li>पहचान प्रमाण — उपलब्ध दस्तावेज के अनुसार</li>
+                    <li>Address Proof — आवश्यकता अनुसार</li>
+                    <li>Passport Size Photograph — आवश्यकता अनुसार</li>
+                    <li>Mobile Number</li>
+                    <li>Correction / Registration संबंधी जानकारी</li>
+                </ul>
+                <div class="form-buttons">
+                    <a class="form-btn official-btn" href="https://voters.eci.gov.in/" target="_blank">Official Link</a>
+                    <a class="form-btn apply-btn" href="https://voters.eci.gov.in/" target="_blank">Apply Now</a>
+                    <a class="form-btn whatsapp-btn" href="https://wa.me/917869419478?text=Voter%20Service%20ke%20liye%20apply%20karna%20hai." target="_blank">WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -730,6 +769,13 @@ const services={
         icon:"<i class='fa-solid fa-desktop'></i>",
         desc:"CSC एवं विभिन्न digital online services के लिए सहायता।",
         docs:["Aadhaar Card","Mobile Number","Email — service के अनुसार","Service-specific documents"]
+    }
+,
+    voter:{
+        title:"Voter Service",
+        icon:"<i class='fa-solid fa-person-booth'></i>",
+        desc:"मतदाता पंजीयन, Voter ID में सुधार, पता परिवर्तन और अन्य मतदाता संबंधित Online सेवाओं में सहायता।",
+        docs:["Aadhaar Card / उपलब्ध पहचान दस्तावेज","Address Proof — आवश्यकता अनुसार","Passport Size Photo — आवश्यकता अनुसार","Mobile Number","Correction / Registration के लिए संबंधित जानकारी"]
     }
 };
 
