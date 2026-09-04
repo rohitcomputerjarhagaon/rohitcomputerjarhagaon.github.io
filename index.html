@@ -219,6 +219,139 @@ border:1px solid #d9e5f6;box-shadow:0 6px 16px rgba(18,61,120,.08)
 .gallery-caption h3{color:#ffd43b;font-size:18px;margin-bottom:5px}.gallery-caption p{font-size:12px;line-height:1.5}
 .gallery-note{text-align:center;color:#667085;margin-top:20px;font-size:13px}
 
+
+/* ================= GALLERY SLIDESHOW ================= */
+.gallery-slideshow{
+    max-width:1100px;
+    height:520px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+    background:#111;
+    box-shadow:0 16px 45px rgba(0,0,0,.18);
+}
+.gallery-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.025);
+    transition:opacity .7s ease, transform 4.2s ease, visibility .7s;
+    cursor:pointer;
+}
+.gallery-slide.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+    z-index:2;
+}
+.gallery-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.gallery-slide:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.08) 48%,rgba(0,0,0,.12));
+    pointer-events:none;
+}
+.gallery-slide .gallery-caption{
+    z-index:3;
+    padding:70px 30px 34px;
+}
+.gallery-slide .gallery-caption h3{
+    font-size:25px;
+}
+.gallery-slide .gallery-caption p{
+    font-size:14px;
+}
+.gallery-slide-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:50%;
+    background:rgba(0,0,0,.38);
+    backdrop-filter:blur(7px);
+    color:#fff;
+    font-size:25px;
+    cursor:pointer;
+    z-index:5;
+    transition:.25s;
+}
+.gallery-slide-btn:hover{
+    background:#ffd43b;
+    color:#111;
+    transform:translateY(-50%) scale(1.06);
+}
+.gallery-slide-prev{left:20px}
+.gallery-slide-next{right:20px}
+.gallery-dots{
+    position:absolute;
+    left:50%;
+    bottom:18px;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+    z-index:6;
+}
+.gallery-dot{
+    width:10px;
+    height:10px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    cursor:pointer;
+    transition:.25s;
+}
+.gallery-dot.active{
+    width:28px;
+    border-radius:10px;
+    background:#ffd43b;
+}
+.gallery-slide-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:6;
+    padding:8px 13px;
+    border-radius:20px;
+    color:#fff;
+    background:rgba(0,0,0,.42);
+    backdrop-filter:blur(8px);
+    font-size:12px;
+    font-weight:800;
+    border:1px solid rgba(255,255,255,.22);
+}
+.gallery-slideshow.paused .gallery-slide-badge:after{
+    content:" • Paused";
+    color:#ffd43b;
+}
+@media(max-width:650px){
+    .gallery-slideshow{
+        height:330px;
+        border-radius:17px;
+    }
+    .gallery-slide .gallery-caption{
+        padding:55px 18px 28px;
+    }
+    .gallery-slide .gallery-caption h3{font-size:19px}
+    .gallery-slide .gallery-caption p{font-size:11px}
+    .gallery-slide-btn{
+        width:42px;
+        height:42px;
+        font-size:19px;
+    }
+    .gallery-slide-prev{left:10px}
+    .gallery-slide-next{right:10px}
+}
+
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:10000;display:none;align-items:center;justify-content:center;padding:20px}
 .lightbox.show{display:flex}.lightbox-content{max-width:1200px;width:100%;display:flex;align-items:center;justify-content:center}
@@ -731,23 +864,35 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
         <p>Rohit Computer Jarhagaon की दुकान एवं सेवाओं की झलक</p>
     </div>
 
-    <div class="gallery-grid">
-        <div class="gallery-card" onclick="openLightbox(0)">
+    <div class="gallery-slideshow" id="gallerySlideshow">
+        <div class="gallery-slide active" data-index="0">
             <img src="SHOP(1).jpg" alt="Rohit Computer Jarhagaon Shop">
             <div class="gallery-caption"><h3>हमारी दुकान</h3><p>Rohit Computer Jarhagaon</p></div>
         </div>
-        <div class="gallery-card" onclick="openLightbox(1)">
+        <div class="gallery-slide" data-index="1">
             <img src="flex.jpeg" alt="Driving Licence Service">
             <div class="gallery-caption"><h3>Driving Licence Services</h3><p>Learning Licence एवं Driving Licence सेवाएँ</p></div>
         </div>
-        <div class="gallery-card" onclick="openLightbox(2)">
+        <div class="gallery-slide" data-index="2">
             <img src="Flex.jpg" alt="Rohit Computer Digital Services">
             <div class="gallery-caption"><h3>CSC & Digital Services</h3><p>Online Form, CSC, PAN, AEPS एवं अन्य Digital Services</p></div>
         </div>
-        <div class="gallery-card" onclick="openLightbox(3)">
+        <div class="gallery-slide" data-index="3">
             <img src="flex2.jpeg" alt="Vehicle Insurance Service">
             <div class="gallery-caption"><h3>Vehicle Insurance</h3><p>विभिन्न वाहनों के Insurance से संबंधित सेवा</p></div>
         </div>
+
+        <button class="gallery-slide-btn gallery-slide-prev" type="button" onclick="galleryPrev(event)" aria-label="Previous image">❮</button>
+        <button class="gallery-slide-btn gallery-slide-next" type="button" onclick="galleryNext(event)" aria-label="Next image">❯</button>
+
+        <div class="gallery-dots" id="galleryDots">
+            <button class="gallery-dot active" type="button" onclick="galleryGoTo(0,event)" aria-label="Image 1"></button>
+            <button class="gallery-dot" type="button" onclick="galleryGoTo(1,event)" aria-label="Image 2"></button>
+            <button class="gallery-dot" type="button" onclick="galleryGoTo(2,event)" aria-label="Image 3"></button>
+            <button class="gallery-dot" type="button" onclick="galleryGoTo(3,event)" aria-label="Image 4"></button>
+        </div>
+
+        <div class="gallery-slide-badge"><i class="fa-solid fa-images"></i> Photo Gallery</div>
     </div>
     <p class="gallery-note">Near Rahan River, Main Road, Jarhagaon</p>
 </section>
@@ -974,7 +1119,7 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
 
 </section>
 
-<a class="float-wa"<a class="float-wa" href="https://wa.me/917869419478" target="_blank" title="WhatsApp करें"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="float-wa" href="https://wa.me/917869419478" target="_blank" title="WhatsApp करें"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
 const galleryImages=[
@@ -983,7 +1128,11 @@ const galleryImages=[
     {src:"Flex.jpg",title:"CSC & Digital Services"},
     {src:"flex2.jpeg",title:"Vehicle Insurance Services"}
 ];
+
 let currentImage=0;
+let gallerySlideIndex=0;
+let galleryTimer=null;
+let galleryPaused=false;
 
 function openLightbox(index){
     currentImage=index;
@@ -1010,6 +1159,88 @@ function previousImage(e){
     currentImage=(currentImage-1+galleryImages.length)%galleryImages.length;
     updateLightbox();
 }
+
+/* GALLERY AUTO SLIDESHOW */
+function galleryRender(index){
+    const slides=document.querySelectorAll(".gallery-slide");
+    const dots=document.querySelectorAll(".gallery-dot");
+    if(!slides.length)return;
+
+    gallerySlideIndex=(index+slides.length)%slides.length;
+
+    slides.forEach((slide,i)=>{
+        slide.classList.toggle("active",i===gallerySlideIndex);
+        slide.onclick=function(){
+            openLightbox(i);
+        };
+    });
+    dots.forEach((dot,i)=>dot.classList.toggle("active",i===gallerySlideIndex));
+}
+
+function galleryStart(){
+    galleryStop();
+    galleryTimer=setInterval(()=>{
+        if(!galleryPaused) galleryRender(gallerySlideIndex+1);
+    },4000);
+}
+
+function galleryStop(){
+    if(galleryTimer){
+        clearInterval(galleryTimer);
+        galleryTimer=null;
+    }
+}
+
+function galleryNext(e){
+    if(e)e.stopPropagation();
+    galleryRender(gallerySlideIndex+1);
+    galleryStart();
+}
+function galleryPrev(e){
+    if(e)e.stopPropagation();
+    galleryRender(gallerySlideIndex-1);
+    galleryStart();
+}
+function galleryGoTo(index,e){
+    if(e)e.stopPropagation();
+    galleryRender(index);
+    galleryStart();
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+    const slideshow=document.getElementById("gallerySlideshow");
+    if(!slideshow)return;
+
+    galleryRender(0);
+    galleryStart();
+
+    slideshow.addEventListener("mouseenter",function(){
+        galleryPaused=true;
+        slideshow.classList.add("paused");
+    });
+    slideshow.addEventListener("mouseleave",function(){
+        galleryPaused=false;
+        slideshow.classList.remove("paused");
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX=0;
+    slideshow.addEventListener("touchstart",function(e){
+        touchStartX=e.changedTouches[0].screenX;
+    },{passive:true});
+    slideshow.addEventListener("touchend",function(e){
+        const touchEndX=e.changedTouches[0].screenX;
+        const diff=touchEndX-touchStartX;
+        if(Math.abs(diff)>45){
+            if(diff<0) galleryNext(e);
+            else galleryPrev(e);
+        }
+    },{passive:true});
+});
+
+document.getElementById("lightbox").addEventListener("click",function(e){
+    if(e.target===this)closeLightbox();
+});
 document.getElementById("lightbox").addEventListener("click",function(e){
     if(e.target===this)closeLightbox();
 });
