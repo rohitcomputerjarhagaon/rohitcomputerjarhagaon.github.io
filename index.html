@@ -142,6 +142,9 @@ border:1px solid #d9e5f6;box-shadow:0 6px 16px rgba(18,61,120,.08)
 .service-card:nth-child(11) .service-icon{background:linear-gradient(145deg,#fff0f5,#d83c76);color:#fff}
 .service-card:nth-child(12) .service-icon{background:linear-gradient(145deg,#e9fbff,#087e9c);color:#fff}
 .service-card:nth-child(13) .service-icon{background:linear-gradient(145deg,#fff0e0,#d83b32);color:#fff}
+.service-card:nth-child(14) .service-icon{background:linear-gradient(145deg,#eafff4,#12a65a);color:#fff}
+.service-card:nth-child(15) .service-icon{background:linear-gradient(145deg,#f0eaff,#7657d9);color:#fff}
+.service-card:nth-child(16) .service-icon{background:linear-gradient(145deg,#fff0df,#e67819);color:#fff}
 
 .form-logo{
     position:relative;
@@ -508,6 +511,26 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
             <h3>Voter Service</h3>
             <p>मतदाता पंजीयन, सुधार, पता परिवर्तन एवं Voter ID संबंधित Online सेवाएँ।</p>
             <a href="#" class="view-details" onclick="openService('voter');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <h3>CG Chalan</h3>
+            <p>CG Chalan, वाहन चालान एवं संबंधित Online सेवाओं में सहायता।</p>
+            <a href="#" class="view-details" onclick="openService('chalan');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-ticket"></i></div>
+            <h3>Ticket Booking</h3>
+            <p>Train, Bus एवं अन्य Ticket Booking सेवाओं में सहायता।</p>
+            <a href="#" class="view-details" onclick="openService('ticket');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>All RTO Work</h3>
+            <p>Driving Licence, RC, Transfer एवं सभी RTO संबंधित कार्य।</p>
+            <a href="#" class="view-details" onclick="openService('rto');return false;">View Details <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
     </div>
@@ -1058,6 +1081,24 @@ const services={
         icon:"<i class='fa-solid fa-person-booth'></i>",
         desc:"मतदाता पंजीयन, Voter ID में सुधार, पता परिवर्तन और अन्य मतदाता संबंधित Online सेवाओं में सहायता।",
         docs:["Aadhaar Card / उपलब्ध पहचान दस्तावेज","Address Proof — आवश्यकता अनुसार","Passport Size Photo — आवश्यकता अनुसार","Mobile Number","Correction / Registration के लिए संबंधित जानकारी"]
+    },
+    chalan:{
+        title:"CG Chalan",
+        icon:"<i class='fa-solid fa-file-invoice-dollar'></i>",
+        desc:"CG Chalan, वाहन चालान एवं संबंधित Online सेवाओं में सहायता।",
+        docs:["Vehicle Number","Chalan Number — यदि उपलब्ध हो","Vehicle Owner Details","Mobile Number"]
+    },
+    ticket:{
+        title:"Ticket Booking",
+        icon:"<i class='fa-solid fa-ticket'></i>",
+        desc:"Train, Bus एवं अन्य Ticket Booking सेवाओं में सहायता।",
+        docs:["Passenger Name","Mobile Number","Travel Date","From & To Station / Location","Valid ID — आवश्यकता अनुसार"]
+    },
+    rto:{
+        title:"All RTO Work",
+        icon:"<i class='fa-solid fa-car-side'></i>",
+        desc:"Driving Licence, RC, Vehicle Transfer एवं अन्य RTO संबंधित कार्यों में सहायता।",
+        docs:["Aadhaar Card / Valid ID","Vehicle RC","Vehicle Owner Details","Mobile Number","RTO-specific Documents"]
     }
 };
 
@@ -1251,7 +1292,7 @@ document.addEventListener("keydown",function(e){
 
         <div class="designer">
             Designed &amp; Manage by
-            <span>❤️ Omprakash Kashyap (Chint2)</span>
+            <span>❤️ Omprakash Kashyap (Chin2)</span>
         </div>
 
     </div>
