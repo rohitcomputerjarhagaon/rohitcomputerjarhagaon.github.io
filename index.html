@@ -503,6 +503,57 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
     .services-grid{grid-template-columns:repeat(2,1fr)}
 }
 
+
+/* ================= PREMIUM WEBSITE UPGRADE ================= */
+.services{position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%)}
+.services:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(18,61,120,.05);top:-150px;right:-110px;pointer-events:none}
+.premium-service-head{max-width:1200px;margin:-12px auto 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.premium-service-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:30px;background:#071c45;color:#fff;font-size:12px;font-weight:800;box-shadow:0 7px 18px rgba(7,28,69,.18)}
+.premium-service-badge i{color:#ffd43b}
+.premium-service-note{color:#667085;font-size:13px}
+.service-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.service-card:after{content:"";position:absolute;inset:auto -35px -55px auto;width:120px;height:120px;border-radius:50%;background:rgba(18,61,120,.035);transition:.35s;pointer-events:none}
+.service-card:hover{transform:translateY(-9px) scale(1.01);border-color:#c8d8ed;box-shadow:0 20px 42px rgba(18,61,120,.15)}
+.service-card:hover:after{transform:scale(1.35);background:rgba(255,212,59,.09)}
+.service-card h3{letter-spacing:.1px}
+.view-details{position:relative;z-index:2}
+
+/* PREMIUM REVIEWS */
+.reviews{position:relative;overflow:hidden}
+.review-box{position:relative;overflow:hidden;max-width:1050px}
+.review-box:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,#123d78,#ffd43b,#25d366)}
+.review-premium-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 24px;text-align:left}
+.review-feature{padding:16px;border:1px solid #e2e8f1;border-radius:14px;background:#f9fbff}
+.review-feature i{font-size:21px;color:#123d78;margin-bottom:9px}
+.review-feature strong{display:block;color:#123d78;font-size:14px;margin-bottom:5px}
+.review-feature span{color:#6c7788;font-size:12px;line-height:1.55}
+.review-google-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#123d78,#1762ad);color:#fff!important;padding:12px 20px;border-radius:28px;font-weight:800;box-shadow:0 8px 18px rgba(18,61,120,.2)}
+.review-google-btn:hover{transform:translateY(-2px)}
+
+/* PREMIUM CONTACT + MAP */
+.premium-contact{padding:72px 5%;background:linear-gradient(135deg,#06142f,#0b3c78 55%,#06142f);color:#fff;position:relative;overflow:hidden}
+.premium-contact:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-180px;top:-210px;background:rgba(255,212,59,.08)}
+.premium-contact-wrap{max-width:1200px;margin:auto;position:relative;z-index:1}
+.premium-contact-title{text-align:center;margin-bottom:32px}
+.premium-contact-title .contact-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border:1px solid rgba(255,255,255,.22);border-radius:30px;background:rgba(255,255,255,.08);font-size:12px;font-weight:800;color:#ffd43b}
+.premium-contact-title h2{font-size:34px;margin:12px 0 8px;color:#fff}
+.premium-contact-title p{font-size:14px;color:#cfe1ff}
+.premium-contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch}
+.premium-contact-card,.premium-map-card{background:rgba(255,255,255,.97);color:#172033;border-radius:20px;padding:24px;box-shadow:0 18px 45px rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.25)}
+.contact-item{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #e8edf4}
+.contact-item:last-child{border-bottom:0}
+.contact-item-icon{width:43px;height:43px;border-radius:13px;background:#eef4ff;color:#123d78;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-item strong{display:block;color:#123d78;font-size:14px;margin-bottom:4px}
+.contact-item span,.contact-item a{font-size:12px;color:#697587;line-height:1.6}
+.contact-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.contact-action{flex:1;min-width:120px;padding:11px 12px;border-radius:10px;text-align:center;font-size:12px;font-weight:800}
+.contact-action.wa{background:#25d366;color:#fff}.contact-action.call{background:#ffd43b;color:#111}.contact-action.map{background:#123d78;color:#fff}
+.premium-map-card{padding:10px;display:flex;flex-direction:column}
+.premium-map-card iframe{width:100%;min-height:360px;border:0;border-radius:14px;flex:1}
+.map-caption{padding:10px 6px 3px;font-size:11px;color:#687386;text-align:center}
+@media(max-width:850px){.premium-contact-grid{grid-template-columns:1fr}.premium-map-card iframe{min-height:300px}.review-premium-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.premium-contact{padding:55px 12px}.premium-contact-title h2{font-size:27px}.premium-contact-card,.premium-map-card{padding:18px}.premium-service-head{align-items:flex-start}.premium-service-note{font-size:12px}.premium-map-card iframe{min-height:270px}}
+
 </style>
 </head>
 
@@ -920,8 +971,55 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
         <div class="stars">★★★★★</div>
         <h3>Rohit Computer Jarhagaon</h3>
         <p>Online services और digital सहायता के लिए संपर्क करें।</p>
-        <div class="review-action"><a href="https://www.google.com/search?q=Rohit+Computer+Jarhagaon" target="_blank">Google पर Review दें</a></div>
-        <div class="review-note">हम केवल वास्तविक customer feedback प्रकाशित करेंगे।</div>
+        <div class="review-premium-grid">
+            <div class="review-feature"><i class="fa-solid fa-star"></i><strong>आपका अनुभव</strong><span>सेवा लेने के बाद अपना वास्तविक अनुभव और feedback साझा करें।</span></div>
+            <div class="review-feature"><i class="fa-solid fa-comments"></i><strong>ईमानदार Feedback</strong><span>आपकी राय से हमारी Online और Digital सेवाओं को बेहतर बनाने में मदद मिलती है।</span></div>
+            <div class="review-feature"><i class="fa-solid fa-thumbs-up"></i><strong>Google Review</strong><span>अपना genuine feedback सीधे Google पर साझा करें।</span></div>
+        </div>
+        <div class="review-action"><a class="review-google-btn" href="https://www.google.com/search?q=Rohit+Computer+Jarhagaon" target="_blank"><i class="fa-brands fa-google"></i> Google पर Review दें</a></div>
+        <div class="review-note">नोट: वेबसाइट पर केवल वास्तविक customer feedback ही प्रकाशित किया जाना चाहिए।</div>
+    </div>
+</section>
+
+<!-- ================= PREMIUM CONTACT + GOOGLE MAP ================= -->
+<section class="premium-contact" id="premium-contact">
+    <div class="premium-contact-wrap">
+        <div class="premium-contact-title">
+            <span class="contact-badge"><i class="fa-solid fa-location-dot"></i> Visit & Connect</span>
+            <h2>Rohit Computer Jarhagaon से संपर्क करें</h2>
+            <p>Online Service, CSC, Forms और अन्य Digital Services के लिए हमसे सीधे संपर्क करें।</p>
+        </div>
+
+        <div class="premium-contact-grid">
+            <div class="premium-contact-card">
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div><strong>हमारा पता</strong><span>Near Rahan River, Main Road,<br>Jarhagaon, Mungeli (CG) 495330</span></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div><strong>Call</strong><a href="tel:7869419478">7869419478</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div><strong>WhatsApp</strong><a href="https://wa.me/917869419478" target="_blank">WhatsApp पर संदेश भेजें</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div><strong>Working Hours</strong><span>Monday - Sunday • 9:00 AM - 8:00 PM<br>हम रविवार को भी खुले रहते हैं।</span></div>
+                </div>
+                <div class="contact-actions">
+                    <a class="contact-action wa" href="https://wa.me/917869419478" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a class="contact-action call" href="tel:7869419478"><i class="fa-solid fa-phone"></i> Call Now</a>
+                    <a class="contact-action map" href="https://maps.app.goo.gl/238FXFLhTPMA97nj7?g_st=ac" target="_blank"><i class="fa-solid fa-map-location-dot"></i> Open Map</a>
+                </div>
+            </div>
+
+            <div class="premium-map-card">
+                <iframe src="https://www.google.com/maps?q=Rahan%20River%20Jarhagaon%20Mungeli%20Chhattisgarh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rohit Computer Jarhagaon Location Map"></iframe>
+                <div class="map-caption"><i class="fa-solid fa-location-dot"></i> Near Rahan River, Main Road, Jarhagaon</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1409,7 +1507,7 @@ document.addEventListener("keydown",function(e){
                 <li><a href="#online-forms">Online Forms</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#premium-contact">Contact</a></li>
             </ul>
 
         </div>
