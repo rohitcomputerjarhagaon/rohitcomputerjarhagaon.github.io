@@ -230,8 +230,112 @@ border:1px solid #d9e5f6;box-shadow:0 6px 16px rgba(18,61,120,.08)
 .about{background:#f5f7fb}.about-box,.review-box{max-width:900px;margin:auto;background:#fff;border-radius:18px;padding:30px;box-shadow:0 8px 25px rgba(0,0,0,.07)}
 .about-box p,.review-box p{color:#5f6b7a;line-height:1.8}.highlight{color:#123d78}
 .reviews{background:#eef4ff}.stars{font-size:28px;color:#f4b400;margin-bottom:10px;text-align:center}.review-box{text-align:center}.review-action{margin-top:18px}.review-action a{display:inline-block;background:#123d78;color:#fff;padding:11px 18px;border-radius:25px;font-weight:800}.review-note{font-size:11px;color:#888;margin-top:10px}
-.contact{background:linear-gradient(135deg,#06152f,#104d91);color:#fff;text-align:center}.contact .section-title h2{color:#ffd43b}.contact .section-title p{color:#fff}.contact-info{max-width:700px;margin:auto;font-size:17px}.contact-info p{margin:12px}
-footer{background:#030d20;color:#aaa;text-align:center;padding:24px 10px;font-size:13px}footer strong{color:#ffd43b}
+
+/* ================= MESSAGE & APPOINTMENT ================= */
+.booking-section{
+    background:linear-gradient(135deg,#f5f8ff,#edf4ff);
+    padding:65px 5%;
+}
+.booking-container{max-width:1150px;margin:auto}
+.booking-heading{text-align:center;margin-bottom:32px}
+.booking-badge{
+    display:inline-flex;align-items:center;gap:7px;
+    background:#eaf2ff;color:#123d78;
+    border:1px solid #cdddf5;border-radius:30px;
+    padding:7px 14px;font-size:12px;font-weight:800;
+    margin-bottom:10px;
+}
+.booking-heading h2{font-size:32px;color:#0d3975;margin-bottom:8px}
+.booking-heading p{color:#667085;font-size:15px}
+.booking-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:22px;
+}
+.booking-card{
+    background:#fff;border:1px solid #dfe7f2;border-radius:18px;
+    padding:22px;box-shadow:0 10px 28px rgba(18,61,120,.09);
+}
+.booking-card-head{
+    display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.booking-card-head h3{color:#123d78;font-size:20px;margin:0 0 3px}
+.booking-card-head p{color:#7a8493;font-size:12px;margin:0}
+.booking-icon{
+    width:46px;height:46px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:19px;box-shadow:0 7px 15px rgba(0,0,0,.12);
+}
+.message-icon{background:linear-gradient(145deg,#1677ff,#0b4ca4)}
+.appointment-icon{background:linear-gradient(145deg,#f4b400,#d88900)}
+.booking-form{width:100%}
+.booking-input-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.booking-input,.booking-textarea{
+    display:flex;align-items:center;
+    border:1px solid #d7e0eb;border-radius:9px;
+    background:#fff;margin-bottom:11px;
+    transition:.2s;
+}
+.booking-input{height:45px}
+.booking-input:focus-within,.booking-textarea:focus-within{
+    border-color:#2c67aa;box-shadow:0 0 0 3px rgba(44,103,170,.08);
+}
+.booking-input i,.booking-textarea i{
+    width:39px;min-width:39px;text-align:center;color:#7a8798;
+}
+.booking-input input,.booking-input select{
+    width:100%;height:100%;border:0;outline:0;
+    background:transparent;color:#394454;font-size:13px;
+    padding-right:10px;font-family:inherit;
+}
+.booking-input select{cursor:pointer}
+.booking-textarea{align-items:flex-start;min-height:82px}
+.booking-textarea i{padding-top:13px}
+.booking-textarea textarea{
+    width:100%;min-height:76px;border:0;outline:0;resize:vertical;
+    padding:11px 10px 9px 0;font-family:inherit;font-size:13px;color:#394454;
+}
+.small-textarea{min-height:67px}
+.small-textarea textarea{min-height:61px}
+.booking-btn{
+    width:100%;height:45px;border:0;border-radius:9px;
+    color:#fff;font-size:14px;font-weight:800;cursor:pointer;
+    transition:.25s;box-shadow:0 7px 16px rgba(0,0,0,.12);
+}
+.booking-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.16)}
+.booking-btn i{margin-right:7px}
+.whatsapp-book-btn{background:linear-gradient(90deg,#18b957,#25d366)}
+.appointment-btn{background:linear-gradient(90deg,#123d78,#1762ad)}
+.booking-info-row{
+    margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);
+    background:#fff;border:1px solid #dfe7f2;border-radius:13px;
+    overflow:hidden;box-shadow:0 6px 20px rgba(18,61,120,.06);
+}
+.booking-info{
+    display:flex;align-items:center;gap:11px;padding:14px 17px;
+    border-right:1px solid #e2e7ef;
+}
+.booking-info:last-child{border-right:0}
+.booking-info>i{
+    width:38px;height:38px;border-radius:50%;
+    background:#eef4ff;color:#123d78;
+    display:flex;align-items:center;justify-content:center;
+}
+.booking-info strong{display:block;color:#123d78;font-size:13px;margin-bottom:2px}
+.booking-info span{display:block;color:#6d7786;font-size:11px}
+@media(max-width:850px){
+    .booking-grid{grid-template-columns:1fr}
+    .booking-info-row{grid-template-columns:1fr}
+    .booking-info{border-right:0;border-bottom:1px solid #e2e7ef}
+    .booking-info:last-child{border-bottom:0}
+}
+@media(max-width:550px){
+    .booking-section{padding:42px 12px}
+    .booking-heading h2{font-size:25px}
+    .booking-heading p{font-size:13px}
+    .booking-card{padding:17px}
+    .booking-input-row{grid-template-columns:1fr;gap:0}
+    .booking-card-head h3{font-size:18px}
+}
+
 .float-wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 5px 20px rgba(0,0,0,.3);z-index:9999}
 
 @media(max-width:1000px){
@@ -653,24 +757,201 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
     </div>
 </section>
 
-<section class="contact" id="contact">
-    <div class="section-title"><h2>आज ही संपर्क करें</h2><p>Online Service के लिए हमसे संपर्क करें</p></div>
-    <div class="contact-info">
-        <p><i class="fa-solid fa-location-dot"></i> <strong>Near Rahan River, Main Road, Jarhagaon</strong></p>
-        <p><i class="fa-solid fa-phone"></i> <strong>7869419478</strong></p>
-        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp पर जानकारी प्राप्त करें</p>
-        <a class="btn whatsapp" href="https://wa.me/917869419478" target="_blank">WhatsApp करें</a>
-        <a class="btn call" href="tel:7869419478">Call Now</a>
-        <a class="btn location" href="https://maps.app.goo.gl/238FXFLhTPMA97nj7?g_st=ac" target="_blank">Google Maps</a>
+<!-- ================= MESSAGE & APPOINTMENT ================= -->
+
+<section class="booking-section" id="contact">
+
+    <div class="booking-container">
+
+        <div class="booking-heading">
+            <span class="booking-badge">
+                <i class="fa-solid fa-headset"></i> Customer Support
+            </span>
+            <h2>संदेश भेजें या Appointment Book करें</h2>
+            <p>Rohit Computer Jarhagaon से Online Service के लिए आसानी से संपर्क करें</p>
+        </div>
+
+        <div class="booking-grid">
+
+            <!-- MESSAGE -->
+            <div class="booking-card">
+                <div class="booking-card-head">
+                    <div class="booking-icon message-icon">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <div>
+                        <h3>हमें संदेश भेजें</h3>
+                        <p>अपनी समस्या या जानकारी हमें भेजें</p>
+                    </div>
+                </div>
+
+                <form id="messageForm" class="booking-form">
+
+                    <div class="booking-input-row">
+                        <div class="booking-input">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="messageName"
+                                   placeholder="आपका नाम" required>
+                        </div>
+
+                        <div class="booking-input">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="messageMobile"
+                                   placeholder="मोबाइल नंबर"
+                                   maxlength="10"
+                                   pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-input">
+                        <i class="fa-solid fa-tag"></i>
+                        <input type="text" id="messageSubject"
+                               placeholder="विषय">
+                    </div>
+
+                    <div class="booking-textarea">
+                        <i class="fa-solid fa-pen"></i>
+                        <textarea id="messageText"
+                                  placeholder="अपना संदेश लिखें..."
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit" class="booking-btn whatsapp-book-btn">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp पर संदेश भेजें
+                    </button>
+
+                </form>
+            </div>
+
+
+            <!-- APPOINTMENT -->
+            <div class="booking-card appointment-card">
+
+                <div class="booking-card-head">
+                    <div class="booking-icon appointment-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <h3>Appointment Book करें</h3>
+                        <p>अपनी सुविधानुसार तारीख और समय चुनें</p>
+                    </div>
+                </div>
+
+                <form id="appointmentForm" class="booking-form">
+
+                    <div class="booking-input-row">
+                        <div class="booking-input">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="appointmentName"
+                                   placeholder="आपका नाम" required>
+                        </div>
+
+                        <div class="booking-input">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="appointmentMobile"
+                                   placeholder="मोबाइल नंबर"
+                                   maxlength="10"
+                                   pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-input">
+                        <i class="fa-solid fa-list-check"></i>
+                        <select id="appointmentService" required>
+                            <option value="">सेवा चुनें</option>
+                            <option>जाति प्रमाण पत्र</option>
+                            <option>निवास प्रमाण पत्र</option>
+                            <option>आय प्रमाण पत्र</option>
+                            <option>PAN Card</option>
+                            <option>Driving Licence</option>
+                            <option>Vehicle Insurance</option>
+                            <option>AEPS / Banking</option>
+                            <option>Online Forms</option>
+                            <option>Scholarship</option>
+                            <option>Print & Scan</option>
+                            <option>Photo Services</option>
+                            <option>Voter Service</option>
+                            <option>CSC Digital Services</option>
+                            <option>Other Service</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-input-row">
+                        <div class="booking-input">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="date" id="appointmentDate" required>
+                        </div>
+
+                        <div class="booking-input">
+                            <i class="fa-solid fa-clock"></i>
+                            <select id="appointmentTime" required>
+                                <option value="">समय चुनें</option>
+                                <option>9:00 AM - 10:00 AM</option>
+                                <option>10:00 AM - 11:00 AM</option>
+                                <option>11:00 AM - 12:00 PM</option>
+                                <option>12:00 PM - 1:00 PM</option>
+                                <option>1:00 PM - 2:00 PM</option>
+                                <option>2:00 PM - 3:00 PM</option>
+                                <option>3:00 PM - 4:00 PM</option>
+                                <option>4:00 PM - 5:00 PM</option>
+                                <option>5:00 PM - 6:00 PM</option>
+                                <option>6:00 PM - 7:00 PM</option>
+                                <option>7:00 PM - 8:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="booking-textarea small-textarea">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <textarea id="appointmentNote"
+                                  placeholder="कोई अतिरिक्त जानकारी (वैकल्पिक)"></textarea>
+                    </div>
+
+                    <button type="submit" class="booking-btn appointment-btn">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Appointment Request भेजें
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="booking-info-row">
+
+            <div class="booking-info">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <strong>Open All Days</strong>
+                    <span>Monday - Sunday • 9:00 AM - 8:00 PM</span>
+                </div>
+            </div>
+
+            <div class="booking-info">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>7869419478</strong>
+                    <span>Call / WhatsApp Support</span>
+                </div>
+            </div>
+
+            <div class="booking-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>Jarhagaon</strong>
+                    <span>Near Rahan River, Main Road</span>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
-<a class="float-wa" href="https://wa.me/917869419478" target="_blank" title="WhatsApp करें"><i class="fa-brands fa-whatsapp"></i></a>
-
-<footer>
-    <p>© 2026 <strong>Rohit Computer, Jarhagaon</strong></p>
-    <p>All Rights Reserved</p>
-</footer>
+<a class="float-wa"<a class="float-wa" href="https://wa.me/917869419478" target="_blank" title="WhatsApp करें"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
 const galleryImages=[
@@ -970,7 +1251,7 @@ document.addEventListener("keydown",function(e){
 
         <div class="designer">
             Designed &amp; Manage by
-            <span>❤️ Omprakash Kashyap (Chin2)</span>
+            <span>❤️ Omprakash Kashyap (Chint2)</span>
         </div>
 
     </div>
@@ -1508,5 +1789,88 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </style>
 
 <!-- ================= END FOOTER ================= -->
+
+<script>
+/* ================= MESSAGE & APPOINTMENT WHATSAPP ================= */
+
+(function(){
+    const waNumber = "917869419478";
+
+    const dateInput = document.getElementById("appointmentDate");
+    if(dateInput){
+        const today = new Date();
+        const localToday =
+            today.getFullYear() + "-" +
+            String(today.getMonth()+1).padStart(2,"0") + "-" +
+            String(today.getDate()).padStart(2,"0");
+        dateInput.min = localToday;
+    }
+
+    const messageForm = document.getElementById("messageForm");
+    if(messageForm){
+        messageForm.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const name = document.getElementById("messageName").value.trim();
+            const mobile = document.getElementById("messageMobile").value.trim();
+            const subject = document.getElementById("messageSubject").value.trim();
+            const message = document.getElementById("messageText").value.trim();
+
+            const text =
+`नमस्ते Rohit Computer Jarhagaon,
+
+मुझे जानकारी चाहिए।
+
+नाम: ${name}
+मोबाइल: ${mobile}
+विषय: ${subject || "सामान्य जानकारी"}
+
+संदेश:
+${message}`;
+
+            window.open(
+                "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text),
+                "_blank"
+            );
+        });
+    }
+
+    const appointmentForm = document.getElementById("appointmentForm");
+    if(appointmentForm){
+        appointmentForm.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const name = document.getElementById("appointmentName").value.trim();
+            const mobile = document.getElementById("appointmentMobile").value.trim();
+            const service = document.getElementById("appointmentService").value;
+            const date = document.getElementById("appointmentDate").value;
+            const time = document.getElementById("appointmentTime").value;
+            const note = document.getElementById("appointmentNote").value.trim();
+
+            const formattedDate = date.split("-").reverse().join("-");
+
+            const text =
+`नमस्ते Rohit Computer Jarhagaon,
+
+मैं Appointment Book करना चाहता/चाहती हूँ।
+
+नाम: ${name}
+मोबाइल: ${mobile}
+सेवा: ${service}
+तारीख: ${formattedDate}
+समय: ${time}
+
+अतिरिक्त जानकारी:
+${note || "कोई अतिरिक्त जानकारी नहीं"}`;
+
+            window.open(
+                "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text),
+                "_blank"
+            );
+        });
+    }
+})();
+</script>
+
 </body>
 </html>
