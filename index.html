@@ -555,6 +555,24 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
 @media(max-width:600px){.premium-contact{padding:55px 12px}.premium-contact-title h2{font-size:27px}.premium-contact-card,.premium-map-card{padding:18px}.premium-service-head{align-items:flex-start}.premium-service-note{font-size:12px}.premium-map-card iframe{min-height:270px}}
 
 </style>
+<style>
+
+/* Rohit AI Help Assistant */
+.float-ai{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border:0;border-radius:50%;background:linear-gradient(135deg,#0879dc,#064a91);color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 22px rgba(0,0,0,.32);z-index:10001;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.float-ai:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.35)}
+.ai-chat-panel{position:fixed;right:20px;bottom:92px;width:min(360px,calc(100vw - 28px));height:min(510px,calc(100vh - 125px));background:#fff;border-radius:18px;box-shadow:0 12px 45px rgba(0,0,0,.28);z-index:10000;display:none;flex-direction:column;overflow:hidden;border:1px solid #dbe5ef;font-family:inherit}
+.ai-chat-panel.open{display:flex}
+.ai-chat-header{display:flex;align-items:center;gap:10px;padding:14px;background:#082c4d;color:#fff;flex-shrink:0}
+.ai-avatar{width:42px;height:42px;border-radius:50%;background:#0879dc;display:flex;align-items:center;justify-content:center;font-size:20px}
+.ai-head-text{display:flex;flex:1;flex-direction:column;gap:4px}.ai-head-text strong{font-size:14px}.ai-head-text small{font-size:11px;color:#d9e9f8}.ai-online-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#2bd576;margin-right:4px}
+.ai-close{border:0;background:transparent;color:#fff;font-size:28px;line-height:1;cursor:pointer;padding:2px 5px}
+.ai-chat-messages{padding:14px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;flex:1;background:#f5f8fc}
+.ai-msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:13px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}.bot-msg{background:#fff;color:#172b40;align-self:flex-start;border:1px solid #e1e9f2;border-bottom-left-radius:4px}.user-msg{background:#0879dc;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.ai-quick-actions{display:flex;flex-wrap:wrap;gap:7px}.ai-quick-actions button{border:1px solid #c8def4;background:#fff;color:#075ca8;border-radius:16px;padding:7px 10px;font-size:11px;cursor:pointer}.ai-quick-actions button:hover{background:#eaf4ff}
+.ai-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid #e4eaf1;background:#fff}.ai-chat-form input{flex:1;min-width:0;border:1px solid #d6e0ea;border-radius:22px;padding:11px 13px;outline:none;font:inherit;font-size:13px}.ai-chat-form input:focus{border-color:#0879dc}.ai-chat-form button{width:42px;height:42px;flex-shrink:0;border:0;border-radius:50%;background:#0879dc;color:#fff;cursor:pointer}.ai-chat-note{text-align:center;color:#748296;font-size:10px;padding:0 8px 8px;background:#fff}
+@media(max-width:480px){.float-ai{right:14px;bottom:16px}.ai-chat-panel{right:10px;bottom:86px;width:calc(100vw - 20px);height:min(500px,calc(100vh - 110px))}}
+
+</style>
 </head>
 
 <body>
@@ -1196,7 +1214,29 @@ nav a{font-size:11px;padding:7px 5px}.hero h1{font-size:36px}
 
 </section>
 
-<a class="float-wa" href="https://wa.me/917869419478" target="_blank" title="WhatsApp करें"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- Rohit AI Help Assistant: floating WhatsApp button replaced -->
+<button class="float-ai" id="floatAiBtn" type="button" aria-label="रोहित AI हेल्प असिस्टेंट खोलें" title="रोहित AI हेल्प असिस्टेंट"><i class="fa-solid fa-robot"></i></button>
+<section class="ai-chat-panel" id="aiChatPanel" aria-label="रोहित AI हेल्प असिस्टेंट" aria-hidden="true">
+  <header class="ai-chat-header">
+    <div class="ai-avatar"><i class="fa-solid fa-robot"></i></div>
+    <div class="ai-head-text"><strong>रोहित AI हेल्प असिस्टेंट</strong><small><span class="ai-online-dot"></span> ऑनलाइन सहायता</small></div>
+    <button type="button" id="aiCloseBtn" class="ai-close" aria-label="चैट बंद करें">&times;</button>
+  </header>
+  <div class="ai-chat-messages" id="aiChatMessages" aria-live="polite">
+    <div class="ai-msg bot-msg">नमस्ते! 🙏 मैं रोहित कम्यूटर जरहागांव का हेल्प असिस्टेंट हूँ। ऑनलाइन फॉर्म, छात्रवृत्ति, परिवहन सेवाओं और हमारे सेंटर की जानकारी के लिए पूछें।</div>
+    <div class="ai-quick-actions">
+      <button type="button" data-question="आप कौन-कौन सी सेवाएँ देते हैं?">हमारी सेवाएँ</button>
+      <button type="button" data-question="आपकी दुकान का समय और पता क्या है?">समय और पता</button>
+      <button type="button" data-question="आपसे संपर्क कैसे करें?">संपर्क करें</button>
+      <button type="button" data-question="छात्रवृत्ति के लिए क्या मदद मिलती है?">छात्रवृत्ति</button>
+    </div>
+  </div>
+  <form class="ai-chat-form" id="aiChatForm">
+    <input id="aiChatInput" type="text" placeholder="अपना सवाल लिखें..." autocomplete="off" aria-label="अपना सवाल लिखें" required>
+    <button type="submit" aria-label="संदेश भेजें"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+  <div class="ai-chat-note">यह स्वचालित सहायता है। ज़रूरत होने पर सेंटर से संपर्क करें।</div>
+</section>
 
 <script>
 const galleryImages=[
@@ -2218,6 +2258,41 @@ ${note || "कोई अतिरिक्त जानकारी नहीं
             );
         });
     }
+})();
+</script>
+
+
+<script>
+(function(){
+  const panel=document.getElementById('aiChatPanel');
+  const openBtn=document.getElementById('floatAiBtn');
+  const closeBtn=document.getElementById('aiCloseBtn');
+  const messages=document.getElementById('aiChatMessages');
+  const form=document.getElementById('aiChatForm');
+  const input=document.getElementById('aiChatInput');
+  if(!panel||!openBtn||!messages||!form||!input)return;
+  function openChat(){panel.classList.add('open');panel.setAttribute('aria-hidden','false');openBtn.setAttribute('aria-expanded','true');setTimeout(()=>input.focus(),100)}
+  function closeChat(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true');openBtn.setAttribute('aria-expanded','false')}
+  openBtn.addEventListener('click',()=>panel.classList.contains('open')?closeChat():openChat());
+  closeBtn.addEventListener('click',closeChat);
+  function addMessage(text,who){const el=document.createElement('div');el.className='ai-msg '+(who==='user'?'user-msg':'bot-msg');el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;return el}
+  function reply(q){const t=q.toLowerCase();
+    if(/सेवा|service|काम|क्या.?क्या|सुविध/.test(t)) return 'हमारे सेंटर पर CSC/डिजिटल सेवाएँ, छत्तीसगढ़ सेवा सेतु, परिवहन सुविधा केंद्र, ऑनलाइन फॉर्म, प्रमाणपत्र आवेदन सहायता, छात्रवृत्ति, PDF फॉर्म डाउनलोड और उपलब्धतानुसार AEPS जैसी सेवाओं में सहायता मिलती है। किसी विशेष सेवा की पुष्टि के लिए हमें कॉल करें।';
+    if(/समय|खुल|बंद|कब आते|timing|time|hours/.test(t)) return 'रोहित कम्यूटर जरहागांव का समय रोज़ सुबह 9:00 बजे से रात 8:00 बजे तक है।';
+    if(/पता|कहाँ|कहां|लोकेशन|address|location|रहन नदी/.test(t)) return 'पता: रहन नदी के पास, मेन रोड, जरहागांव, जिला मुंगेली, छत्तीसगढ़ – 495330।';
+    if(/संपर्क|फोन|मोबाइल|कॉल|contact|number|whatsapp/.test(t)) return 'हमसे 7869419478 पर संपर्क करें। ईमेल: rohitcomputerjarhagaon@gmail.com। वेबसाइट: https://rohitcomputerjarhagaon.github.io/';
+    if(/छात्रवृत्ति|scholarship|पोस्ट.?मैट्रिक|post.?matric/.test(t)) return 'छात्रवृत्ति फॉर्म भरने और दस्तावेज़ संबंधी सहायता के लिए सेंटर पर संपर्क करें। आवश्यक दस्तावेज़ योजना, श्रेणी और आवेदन के प्रकार के अनुसार बदल सकते हैं।';
+    if(/ड्राइविंग|लाइसेंस|परिवहन|ड्राइविंग लाइसेंस|renew|रिन्यू|वाहन|rto/.test(t)) return 'हमारे परिवहन सुविधा केंद्र में उपलब्ध परिवहन सेवाओं के बारे में जानकारी और आवेदन सहायता के लिए 7869419478 पर संपर्क करें। पात्रता और दस्तावेज़ सेवा के अनुसार अलग हो सकते हैं।';
+    if(/पैन|pan|आधार|aadhaar|aeps|वोटर|voter|जाति|निवास|आय प्रमाण/.test(t)) return 'इस सेवा के लिए आवेदन सहायता उपलब्धता जानने हेतु रोहित कम्यूटर जरहागांव से 7869419478 पर संपर्क करें। दस्तावेज़ सेवा के अनुसार अलग हो सकते हैं।';
+    if(/वेबसाइट|website|instagram|youtube|इंस्टाग्राम|यूट्यूब/.test(t)) return 'वेबसाइट: https://rohitcomputerjarhagaon.github.io/
+Instagram: https://www.instagram.com/rohitcomputerjarhagaon1/
+YouTube: https://youtube.com/@rohitcomputerjarhagaon';
+    if(/नमस्ते|hello|hi|हेलो|नमस्कार/.test(t)) return 'नमस्ते! 😊 बताइए, आपको किस सेवा के बारे में जानकारी चाहिए—ऑनलाइन फॉर्म, छात्रवृत्ति, परिवहन सेवा, प्रमाणपत्र या सेंटर का पता?';
+    return 'मैं अभी रोहित कम्यूटर जरहागांव की सामान्य सेवाओं, समय, पते और संपर्क की जानकारी दे सकता हूँ। आपके सवाल का सटीक उत्तर मेरे पास नहीं है। कृपया 7869419478 पर संपर्क करें या अपना सवाल थोड़ा और स्पष्ट लिखें।';
+  }
+  function ask(q){if(!q.trim())return;addMessage(q,'user');const answer=reply(q);setTimeout(()=>addMessage(answer,'bot'),120)}
+  form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;input.value='';ask(q)});
+  messages.querySelectorAll('[data-question]').forEach(btn=>btn.addEventListener('click',()=>ask(btn.getAttribute('data-question')||'')));
 })();
 </script>
 
