@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="रोहित कम्यूटर जरहागांव PDF Form Center — महत्वपूर्ण PDF फॉर्म खोजें और डाउनलोड करें।">
+<meta name="theme-color" content="#071c45">
+<title>PDF Form Center | रोहित कम्यूटर जरहागांव</title>
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--navy:#071c45;--blue:#124e9b;--gold:#ffd43b;--ink:#172033;--muted:#667085;--line:#e2eaf5;--bg:#f4f7fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{text-decoration:none}
+.topbar{background:linear-gradient(120deg,#06142f,#0b3c78 65%,#071c45);color:#fff;padding:22px 5%;position:relative;overflow:hidden}
+.topbar:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-90px;top:-180px;background:rgba(255,212,59,.1)}
+.top-inner{max-width:1180px;margin:auto;display:flex;align-items:center;gap:15px;position:relative;z-index:1}
+.brand-icon{width:58px;height:58px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;color:var(--gold);font-size:27px;flex-shrink:0}
+.brand h1{font-size:clamp(21px,3vw,30px);line-height:1.2}.brand p{font-size:13px;color:#cfe1ff;margin-top:5px}
+.home-link{margin-left:auto;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:10px 14px;font-size:13px;font-weight:700;white-space:nowrap}
+.hero{padding:38px 5% 28px;background:linear-gradient(180deg,#e9f1ff,#f4f7fc)}
+.wrap{max-width:1180px;margin:auto}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border-radius:25px;background:#fff;border:1px solid #d8e5f8;color:#17467e;padding:7px 12px;font-size:12px;font-weight:800}
+.hero h2{font-size:clamp(27px,4vw,40px);color:#0d3975;margin:14px 0 8px;line-height:1.18}
+.hero p{color:#5f6f86;max-width:700px}
+.search-panel{max-width:1180px;margin:-2px auto 0;padding:0 5%;position:relative;z-index:2}
+.search-box{background:#fff;border:1px solid #dce5f1;border-radius:16px;box-shadow:0 12px 32px rgba(13,57,117,.1);padding:15px;display:grid;grid-template-columns:1fr 220px;gap:12px}
+.search-input{display:flex;align-items:center;gap:11px;padding:0 14px;min-height:50px;border:1px solid #d8e1ed;border-radius:10px;color:#54708f}
+.search-input input{width:100%;border:0;outline:0;font:inherit;color:var(--ink);min-width:0}
+select{width:100%;min-height:50px;border:1px solid #d8e1ed;border-radius:10px;padding:0 12px;background:#fff;font:inherit;color:#344054}
+.content{max-width:1180px;margin:26px auto 0;padding:0 5% 45px}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 17px;flex-wrap:wrap}
+.results-head h3{font-size:20px;color:#123d78}.count{font-size:12px;color:#667085;background:#e9eff8;padding:6px 10px;border-radius:20px}
+.pdf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.pdf-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:0 6px 20px rgba(18,61,120,.05);transition:.2s;display:flex;flex-direction:column;min-height:205px}
+.pdf-card:hover{transform:translateY(-4px);box-shadow:0 13px 28px rgba(18,61,120,.11);border-color:#c5d7ef}
+.card-top{display:flex;align-items:flex-start;gap:12px}
+.pdf-icon{width:48px;height:52px;display:grid;place-items:center;border-radius:11px;background:#fff0f0;color:#d92d20;font-size:23px;flex-shrink:0}
+.pdf-card h4{font-size:16px;color:#123d78;line-height:1.35;margin:2px 0 5px}
+.category{display:inline-block;background:#eef4ff;color:#345d91;padding:3px 8px;border-radius:20px;font-size:10px;font-weight:800}
+.pdf-card p{font-size:12px;color:#667085;margin:13px 0 16px}
+.card-actions{display:flex;gap:8px;margin-top:auto}
+.action{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 9px;border-radius:9px;font-size:12px;font-weight:800}
+.preview{background:#eef4ff;color:#123d78;border:1px solid #d8e5f8}
+.download{background:#123d78;color:#fff}
+.empty{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #b8cbe4;border-radius:16px;padding:38px 20px;color:#667085}
+.empty i{font-size:35px;color:#7793b9;margin-bottom:12px}.empty h4{font-size:18px;color:#123d78;margin-bottom:7px}
+.empty p{max-width:650px;margin:0 auto;font-size:13px}
+.help{margin-top:22px;background:#fff8df;border:1px solid #f5dfa0;border-left:4px solid #f4b400;padding:14px 16px;border-radius:10px;color:#665200;font-size:12px}
+footer{background:#06142f;color:#d5e3f8;padding:22px 5%;text-align:center;font-size:12px}
+footer strong{color:#fff}
+@media(max-width:850px){.pdf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.search-box{grid-template-columns:1fr}.home-link{font-size:12px;padding:9px 10px}}
+@media(max-width:560px){.topbar{padding:17px 4%}.top-inner{gap:10px}.brand-icon{width:46px;height:46px;font-size:21px}.brand p{font-size:11px}.home-link{max-width:105px;white-space:normal;text-align:center}.hero{padding:28px 4% 24px}.search-panel,.content{padding-left:4%;padding-right:4%}.pdf-grid{grid-template-columns:1fr}.pdf-card{min-height:0}.results-head h3{font-size:18px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="top-inner">
+    <div class="brand-icon"><i class="fa-solid fa-file-pdf"></i></div>
+    <div class="brand">
+      <h1>PDF Form Center</h1>
+      <p>रोहित कम्यूटर जरहागांव · Digital Service Hub</p>
+    </div>
+    <a class="home-link" href="index.html"><i class="fa-solid fa-house"></i> मुख्य वेबसाइट</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> आसान खोज · सीधा डाउनलोड</span>
+    <h2>अपने जरूरी PDF फॉर्म खोजें</h2>
+    <p>फॉर्म का नाम लिखें या कैटेगरी चुनें। उपलब्ध PDF को खोलें या अपने डिवाइस में डाउनलोड करें।</p>
+  </div>
+</section>
+
+<div class="search-panel">
+  <div class="search-box">
+    <label class="search-input"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" type="search" placeholder="फॉर्म का नाम खोजें..." autocomplete="off" aria-label="PDF फॉर्म खोजें"></label>
+    <select id="categorySelect" aria-label="कैटेगरी चुनें">
+      <option value="all">सभी कैटेगरी</option>
+      <option value="प्रमाण पत्र">प्रमाण पत्र</option>
+      <option value="छात्रवृत्ति">छात्रवृत्ति</option>
+      <option value="शिक्षा">शिक्षा</option>
+      <option value="सरकारी फॉर्म">सरकारी फॉर्म</option>
+      <option value="अन्य">अन्य</option>
+    </select>
+  </div>
+</div>
+
+<main class="content">
+  <div class="results-head">
+    <h3><i class="fa-solid fa-folder-open"></i> उपलब्ध PDF फॉर्म</h3>
+    <span class="count" id="resultCount">0 फॉर्म</span>
+  </div>
+  <div class="pdf-grid" id="pdfGrid" aria-live="polite"></div>
+  <div class="help"><strong><i class="fa-solid fa-circle-info"></i> सूचना:</strong> फॉर्म उपलब्ध होने पर ही डाउनलोड बटन दिखेगा। आवेदन से पहले संबंधित विभाग की आधिकारिक वेबसाइट पर नवीनतम निर्देश अवश्य जाँचें।</div>
+</main>
+
+<footer>
+  <strong>रोहित कम्यूटर जरहागांव</strong> · रहन नदी के पास, मेन रोड, जरहागांव, जिला मुंगेली, छत्तीसगढ़ – 495330<br>
+  संपर्क: <a href="tel:7869419478" style="color:#ffd43b">7869419478</a> · <a href="https://rohitcomputerjarhagaon.github.io/" style="color:#ffd43b">मुख्य वेबसाइट</a>
+</footer>
+
+<script>
+/*
+  PDF फॉर्म जोड़ने का तरीका:
+  1. अपनी वेबसाइट के GitHub repository में "pdfs" नाम का folder बनाएं।
+  2. PDF फाइलें उस folder में upload करें।
+  3. नीचे FORMS सूची में title, category, description और file का सही path जोड़ें।
+  उदाहरण:
+  { title: "जाति प्रमाण पत्र फॉर्म", category: "प्रमाण पत्र",
+    description: "जाति प्रमाण पत्र आवेदन से संबंधित PDF।", file: "pdfs/caste-form.pdf" }
+  नोट: यह GitHub Pages की static वेबसाइट है; इस पेज से सीधे server पर upload नहीं होगा।
+*/
+const FORMS = [
+  // उदाहरण ऊपर दिए गए हैं। वास्तविक PDF फाइलें अपलोड होने के बाद यहाँ उनकी entries जोड़ें।
+];
+
+const grid = document.getElementById('pdfGrid');
+const searchInput = document.getElementById('searchInput');
+const categorySelect = document.getElementById('categorySelect');
+const resultCount = document.getElementById('resultCount');
+
+function safeText(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[char]));
+}
+function renderForms() {
+  const query = searchInput.value.trim().toLocaleLowerCase('hi');
+  const category = categorySelect.value;
+  const filtered = FORMS.filter(form => {
+    const haystack = `${form.title || ''} ${form.category || ''} ${form.description || ''}`.toLocaleLowerCase('hi');
+    return haystack.includes(query) && (category === 'all' || form.category === category);
+  });
+  resultCount.textContent = `${filtered.length} फॉर्म`;
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty"><i class="fa-regular fa-folder-open"></i><h4>${FORMS.length ? 'कोई मिलान वाला फॉर्म नहीं मिला' : 'PDF फॉर्म जल्द जोड़े जाएँगे'}</h4><p>${FORMS.length ? 'दूसरा नाम खोजें या कैटेगरी बदलकर देखें।' : 'अभी इस पेज पर कोई PDF फाइल सूचीबद्ध नहीं है। PDF फाइलें वेबसाइट के pdfs folder में अपलोड करके सूची में जोड़ने के बाद यहाँ सर्च और डाउनलोड की सुविधा काम करेगी।'}</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(form => {
+    const file = safeText(form.file || '');
+    const title = safeText(form.title || 'PDF Form');
+    const categoryName = safeText(form.category || 'अन्य');
+    const description = safeText(form.description || 'PDF दस्तावेज़');
+    const hasFile = Boolean(form.file);
+    return `<article class="pdf-card">
+      <div class="card-top"><div class="pdf-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <div><h4>${title}</h4><span class="category">${categoryName}</span></div></div>
+      <p>${description}</p>
+      <div class="card-actions">
+        ${hasFile ? `<a class="action preview" href="${file}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> खोलें</a><a class="action download" href="${file}" download><i class="fa-solid fa-download"></i> डाउनलोड</a>` : `<span class="action preview" aria-disabled="true">फाइल उपलब्ध नहीं</span>`}
+      </div>
+    </article>`;
+  }).join('');
+}
+searchInput.addEventListener('input', renderForms);
+categorySelect.addEventListener('change', renderForms);
+renderForms();
+</script>
+</body>
+</html>
