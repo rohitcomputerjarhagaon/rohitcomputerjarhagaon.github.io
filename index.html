@@ -577,6 +577,64 @@ nav a[href="pdf-forms.html"]:hover{background:#ffd43b;color:#111}
 @media(max-width:480px){.float-ai{right:14px;bottom:16px}.ai-chat-panel{right:10px;bottom:86px;width:calc(100vw - 20px);height:min(500px,calc(100vh - 110px))}}
 
 </style>
+
+<style>
+/* Header refinement: keep the original design, make the brand one line,
+   and make navigation slightly smaller and right-aligned. */
+@media (min-width: 851px) {
+    header {
+        gap: 14px;
+    }
+    .logo {
+        flex: 0 1 auto;
+        min-width: 0;
+        gap: 11px;
+    }
+    .logo-text strong {
+        white-space: nowrap;
+        font-size: 25px;
+        letter-spacing: -0.25px;
+    }
+    .logo-text strong span {
+        display: inline;
+    }
+    nav {
+        margin-left: auto;
+        justify-content: flex-end;
+        gap: 2px;
+        flex: 0 0 auto;
+        flex-wrap: wrap;
+    }
+    nav a {
+        font-size: 12px;
+        padding: 8px 9px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 850px) {
+    header nav {
+        width: 100%;
+        justify-content: center;
+        gap: 2px;
+    }
+    header nav a {
+        font-size: 11px;
+        padding: 7px 8px;
+        white-space: nowrap;
+    }
+    .logo-text strong {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo-text strong {
+        font-size: 17px;
+    }
+}
+</style>
+
 </head>
 
 <body>
