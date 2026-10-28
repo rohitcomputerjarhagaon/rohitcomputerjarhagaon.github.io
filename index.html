@@ -192,6 +192,18 @@ border:1px solid #d9e5f6;box-shadow:0 6px 16px rgba(18,61,120,.08)
 
 /* FORMS */
 .latest-forms{background:linear-gradient(135deg,#f5f8ff,#fff)}
+/* Premium PDF Form Center banner above Latest Online Forms */
+.pdf-center-wrap{max-width:1200px;margin:0 auto 30px;padding:0 20px}
+.pdf-center-card{position:relative;display:flex;align-items:center;gap:18px;justify-content:space-between;padding:18px 22px;border:1px solid #d9e5f5;border-radius:18px;background:linear-gradient(115deg,#ffffff 0%,#f2f7ff 60%,#fffaf0 100%);box-shadow:0 12px 30px rgba(11,42,86,.09);overflow:hidden}
+.pdf-center-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#ffd43b,#dba91b)}
+.pdf-center-info{display:flex;align-items:center;gap:15px;min-width:0}
+.pdf-center-icon{width:56px;height:56px;flex:0 0 56px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,212,59,.62);border-radius:16px;background:linear-gradient(145deg,#071d43 0%,#124b91 58%,#1c68b5 100%);color:#ffd43b;font-size:25px;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 9px 20px rgba(18,61,120,.25);position:relative}.pdf-center-icon:after{content:"";position:absolute;right:-4px;bottom:-4px;width:15px;height:15px;border:2px solid #fff;border-radius:50%;background:#ffd43b;box-shadow:0 2px 6px rgba(11,42,86,.18)}.pdf-center-icon i{filter:drop-shadow(0 2px 2px rgba(0,0,0,.22))}
+.pdf-center-copy h3{margin:0 0 5px;color:#102e5c;font-size:18px;font-weight:850;letter-spacing:.1px}
+.pdf-center-copy p{margin:0;color:#64748b;font-size:13px;line-height:1.55}
+.pdf-center-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-shrink:0;padding:12px 17px;border:1px solid rgba(255,212,59,.32);border-radius:11px;background:linear-gradient(135deg,#092957 0%,#0b3472 52%,#1762ad 100%);color:#fff!important;font-size:14px;font-weight:900;letter-spacing:.15px;text-shadow:0 1px 1px rgba(0,0,0,.18);box-shadow:0 9px 20px rgba(18,61,120,.24),inset 0 1px 0 rgba(255,255,255,.12);transition:transform .2s,box-shadow .2s}
+.pdf-center-btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(18,61,120,.28)}
+.pdf-center-btn .pdf-gold{color:#ffd43b}
+@media(max-width:650px){.pdf-center-wrap{padding:0 14px;margin-bottom:25px}.pdf-center-card{align-items:flex-start;flex-direction:column;padding:17px 16px;gap:14px}.pdf-center-info{gap:12px}.pdf-center-icon{width:46px;height:46px;flex-basis:46px;font-size:20px}.pdf-center-copy h3{font-size:16px}.pdf-center-copy p{font-size:12px}.pdf-center-btn{width:100%;padding:12px 14px}}
 .forms-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
 .latest-form-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e1e9f5;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.3s}
 .latest-form-card:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(0,0,0,.14)}
@@ -822,18 +834,26 @@ nav a[href="pdf-forms.html"]:hover{background:#ffd43b;color:#111}
 </div>
 
 <section class="latest-forms" id="forms">
+    <div class="pdf-center-wrap">
+        <div class="pdf-center-card">
+            <div class="pdf-center-info">
+                <div class="pdf-center-icon" aria-label="PDF forms"><i class="fa-solid fa-file-circle-check"></i></div>
+                <div class="pdf-center-copy">
+                    <h3>PDF Form Center</h3>
+                    <p>ज़रूरी PDF फॉर्म आसानी से खोजें और डाउनलोड करें।</p>
+                </div>
+            </div>
+            <a class="pdf-center-btn" href="pdf-forms.html" target="_blank" rel="noopener noreferrer" title="PDF Form Center नए टैब में खोलें">
+                <span class="pdf-gold"><i class="fa-solid fa-folder-open"></i></span>
+                PDF Form Center खोलें
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px"></i>
+            </a>
+        </div>
+    </div>
+
     <div class="section-title">
         <h2>Latest Online Forms</h2>
         <p>आवश्यक दस्तावेज देखें और Official Portal से आवेदन करें</p>
-    </div>
-
-    <div style="max-width:1200px;margin:-12px auto 28px;display:flex;justify-content:center;">
-        <a href="pdf-forms.html" target="_blank" rel="noopener noreferrer"
-           style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:12px;background:linear-gradient(135deg,#0b3472,#1762ad);color:#fff;font-weight:800;box-shadow:0 9px 22px rgba(18,61,120,.2);text-align:center;">
-           <i class="fa-solid fa-file-pdf" style="font-size:20px;color:#ffd43b"></i>
-           PDF Form Center खोलें
-           <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:12px"></i>
-        </a>
     </div>
 
     <div class="forms-grid">
