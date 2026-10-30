@@ -115,14 +115,75 @@ footer strong{color:#fff}
   नोट: यह GitHub Pages की static वेबसाइट है; इस पेज से सीधे server पर upload नहीं होगा।
 */
 
+
 const FORMS = [
   {
+    title: "आय प्रमाण पत्र ऑफलाइन फॉर्म",
+    category: "जाति / निवास / आय",
+    description: "आय प्रमाण पत्र बनाने के लिए ऑफलाइन आवेदन फॉर्म PDF डाउनलोड करें।",
+    file: "pdfs/amdani-offline.pdf"
+  },
+  {
+    title: "छत्तीसगढ़ राशन कार्ड नामिनी फॉर्म",
+    category: "सरकारी फॉर्म",
+    description: "राशन कार्ड में नामिनी जोड़ने के लिए आवेदन फॉर्म।",
+    file: "pdfs/CG-RASHAN-NOMINEE-FORM.pdf"
+  },
+  {
+    title: "छात्रवृत्ति जाति निवास आय फॉर्म",
+    category: "छात्रवृत्ति",
+    description: "छात्रवृत्ति से संबंधित आवश्यक प्रमाण पत्र फॉर्म।",
+    file: "pdfs/chatrawritti-jati-nivas-aay.pdf"
+  },
+  {
+    title: "धन नामिनी आवेदन फॉर्म",
+    category: "अन्य PDF फॉर्म",
+    description: "नामिनी संबंधी आवेदन फॉर्म डाउनलोड करें।",
+    file: "pdfs/Dhan-nomani-form.pdf"
+  },
+  {
+    title: "जाति एवं निवास ऑफलाइन फॉर्म",
+    category: "जाति / निवास / आय",
+    description: "जाति और निवास प्रमाण पत्र के लिए ऑफलाइन आवेदन फॉर्म।",
+    file: "pdfs/jaati+niwas-offline.pdf"
+  },
+  {
+    title: "जाति प्रमाण पत्र ऑफलाइन फॉर्म",
+    category: "जाति / निवास / आय",
+    description: "जाति प्रमाण पत्र बनाने के लिए आवेदन फॉर्म।",
+    file: "pdfs/JAATI-offline.pdf"
+  },
+  {
+    title: "जन्म एवं मृत्यु प्रमाण पत्र फॉर्म",
+    category: "सरकारी फॉर्म",
+    description: "जन्म और मृत्यु प्रमाण पत्र से संबंधित आवेदन फॉर्म।",
+    file: "pdfs/Janm-Mrityu-form.pdf"
+  },
+  {
+    title: "निवास प्रमाण पत्र ऑफलाइन फॉर्म",
+    category: "जाति / निवास / आय",
+    description: "निवास प्रमाण पत्र बनाने के लिए ऑफलाइन आवेदन फॉर्म।",
+    file: "pdfs/NIWAS-offline.pdf"
+  },
+  {
+    title: "PAN Card Correction Form",
+    category: "पैन कार्ड",
+    description: "पैन कार्ड में सुधार के लिए आवेदन फॉर्म PDF।",
+    file: "pdfs/PAN-CORECTION-FORM.pdf"
+  },
+  {
+    title: "प्रधानमंत्री आवास योजना 2.0 फॉर्म",
+    category: "सरकारी फॉर्म",
+    description: "PM Awas Yojana 2.0 आवेदन फॉर्म डाउनलोड करें।",
+    file: "pdfs/PM-AWAS-2.0-FORM.pdf"
+  },
     title: "PAN Card Apply Form",
     category: "पैन कार्ड",
     description: "नया PAN Card आवेदन फॉर्म PDF डाउनलोड करें।",
     file: "pdfs/new-pan-card-apply-form-93.pdf.pdf"
   }
 ];
+
 
 const grid = document.getElementById('pdfGrid');
 const searchInput = document.getElementById('searchInput');
